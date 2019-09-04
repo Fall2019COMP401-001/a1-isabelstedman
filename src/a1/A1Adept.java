@@ -37,7 +37,7 @@ public class A1Adept {
 		for (int i = 0; i < totalCustomers; i++) {
 			orderPrice[i] = totalPaid(totalQuantity[i], orders[i], foodPrices, foodName);
 		}
-		double biggest = largestIndex(orderPrice);
+		double biggest = largestReturn(orderPrice);
 		double smallest = smallestReturn(orderPrice);
 		String biggestName = firstNames[largestIndex(orderPrice)]+ " " + lastNames[largestIndex(orderPrice)];
 		String smallestName = firstNames[smallestIndex(orderPrice)]+ " " + lastNames[smallestIndex(orderPrice)];
@@ -102,4 +102,14 @@ public class A1Adept {
 		}
 		return total/prices.length;
 	}
+	private static double largestReturn (double[] prices) {
+		double biggest = prices[0];
+		for (int i = 0; i < prices.length; i++) {
+			if (prices[i] > biggest) {
+				biggest = prices[i];
+			}
+		}
+		return biggest;
+	}
+	
 }
