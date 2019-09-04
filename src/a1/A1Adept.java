@@ -95,12 +95,11 @@ public class A1Adept {
 		}
 		return smallestIndex;
 	}
-	private static int getAverage (double[] prices) {
+	private static double getAverage (double[] prices) {
 		double total = 0.0;
 		for (int x = 0; x < prices.length; x++) {
 			total += prices[x];
 		}
-		return (int) 
-				(total/prices.length);
+		return total/prices.length;
 	}
 }
